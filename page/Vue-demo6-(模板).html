@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue2.0 - 模板语法</title>
+</head>
+<body>
+	
+	<span id="appMu" v-html="msg" v-once>{{ msg }}</span>
+	<!-- v-html  把h2解析为html  不会解析成字符串 -->
+
+	<p id="appTest">{{status?'YES':'NO'}}</p>
+
+	<p id="appTestTwo">{{num + 1}}</p>
+
+	<p id="appTestThree">{{text.split('').reverse().join('')}}</p>
+
+	<!-- 在HTML表达式中 可以进行一些简单的逻辑运算 -->
+
+	<script src="../node_modules/vue/dist/vue.min.js"></script>
+	<script src="./js/vue-demo6.js"></script>
+</body>
+</html>

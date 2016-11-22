@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue2.0 - 条件与循环</title>
+</head>
+<body>
+	<div id="appThree">
+		<p v-if="seen"> Now you see me</p>
+	</div>
+
+	<div id="appFour">
+		<ol>
+			<li v-for="todo in todos">
+				{{ todo.text }}
+			</li>
+		</ol>
+	</div>
+
+	<script src="../node_modules/vue/dist/vue.min.js"></script>
+
+	<script src="./js/vue-demo2.js"></script>
+</body>
+</html>
