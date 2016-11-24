@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue2.0 - 绑定语法</title>
+</head>
+<body>
+	<!-- <div v-bind:class="{active:isActive}"></div> -->
+	<div class="static" v-bind:class="{ active:isActive,'text-danger':hasError }"></div>
+
+	<div class="textClassObj" v-bind:class="classObject"></div>
+	
+	<div class="testActive">{{ error }}</div>
+
+	<div class="classArray" v-bind:class="[activeClass,errorClass]"></div>
+	<!-- 数组语法 -->
+
+	<div v-bind:class="[isActive?activeClass:'',errorClass]"></div>
+	<!-- 数组三元表达式语法   -->
+	<!-- 此例始终添加 errorClass ，但是只有在 isActive 是 true 时添加 activeClass -->
+
+	<script src="../node_modules/vue/dist/vue.min.js"></script>
+	<script src="./js/vue-demo10.js"></script>
+</body>
+</html>

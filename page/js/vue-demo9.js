@@ -11,7 +11,7 @@ var watchExampleVM = new Vue({
 		}
 	},
 	methods:{
-		getAnswer:_.debounce(
+		getAnswer:_.debounce(	//延迟调用
 			function(){
 				var vm = this;
 				if(this.question.indexOf('?') === -1){
@@ -21,7 +21,7 @@ var watchExampleVM = new Vue({
 				
 				vm.answer = 'Thinking...'
 				axios.get('https://yesno.wtf/api').then(function(response){
-					vm.answer = _.capitalize(response.data.answer)
+					vm.answer = _.capitalize(response.data.answer)	//_.capitalize 转换首字母大写
 				}).catch(function(error){
 					vm.answer = 'Error! Could not reach the API.' + error
 				})

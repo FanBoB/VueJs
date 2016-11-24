@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue2.0 - 条件渲染or判断</title>
+</head>
+<body>
+	<div class="Vif">
+		<h1 v-if="num>1">Yes</h1>	<!-- v-if  可以进行逻辑运算 -->
+		<h1 v-else>No</h1>
+	</div>
+
+	<div class="VifTwo">
+		<template v-if="num>1">
+			<h1>Title</h1>
+			<p>num > 1</p>
+			<p>num > 1</p>
+		</template>
+
+		<template v-else>
+			<h1>Title</h1>
+			<p>num < 1</p>
+			<p>num < 1</p>
+		</template>
+	</div>
+
+	<div class="vShow">
+		
+	</div>
+	
+	
+	<script src="../node_modules/vue/dist/vue.min.js"></script>
+	<script src="./js/vue-demo11.js"></script>
+</body>
+</html>

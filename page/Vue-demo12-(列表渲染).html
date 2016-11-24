@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue2.0 - 列表渲染</title>
+</head>
+<body>
+	
+	<ul id="exampleOne">
+		<li v-for="item in items">
+			{{ item.message }}
+		</li>
+	</ul>
+
+	<ul id="exampleTwo">
+		<li v-for="(item,index) in items">
+			{{ parentMessage }} - {{ index }} - {{ item.message }}
+		</li>
+	</ul>
+	<script src="../node_modules/vue/dist/vue.min.js"></script>
+	<script src="./js/vue-demo12.js"></script>
+</body>
+</html>
